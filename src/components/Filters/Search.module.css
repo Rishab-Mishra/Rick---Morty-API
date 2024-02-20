@@ -1,0 +1,24 @@
+.heading{
+    text-align: center;
+    font-weight: 800;
+    font-size: 3rem;
+    color: rgba(9, 111, 9, 0.842);
+}
+.bar{
+    margin-left: 500px;
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+input{
+    width: 500px;
+    height: 3rem;
+    border-radius: .5rem;
+}
+.btn-success{
+    width: 7rem;
+}
+input::placeholder{
+    padding-left: 0.5rem;
+
+}
