@@ -75,7 +75,7 @@ const Filters = ({setStatus , setGender , setSpecies})=>{
                         <input type="radio" class="btn-check" name="species" id="animal" autoComplete="off"/>
                         <label onClick={() => speciesClicked("animal")} className="btn btn-outline-success"  htmlFor="animal">Animal</label>
                         <input type="radio" class="btn-check" name="species" id="robot" autoComplete="off"/>
-                        <label onClick={() => speciesClicked("robot")} className="btn btn-outline-success" htmlFor="robot">Genderless</label>
+                        <label onClick={() => speciesClicked("robot")} className="btn btn-outline-success" htmlFor="robot">Robot</label>
                         <input type="radio" class="btn-check" name="species" id="species-Unknonw" autoComplete="off"/>
                         <label onClick={() => speciesClicked("unknown")} className="btn btn-outline-success" htmlFor="species-Unknonw">Unknown</label>
                     </div>
