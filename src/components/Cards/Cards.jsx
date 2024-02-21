@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 const Cards = ({results , page}) => {
 
   return results? (results.map((x)=>{
-    console.log(x);
     const {id , name , image, species, status, location} = x;
     return(
    <Link 

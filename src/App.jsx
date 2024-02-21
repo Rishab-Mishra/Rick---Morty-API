@@ -42,7 +42,6 @@ function App() {
   });
 
   const { searchName, status, gender, species, pageNumber, fetchedData } = state;
-
   useEffect(() => {
     (function () {
       postServices.getPost({
@@ -70,6 +69,9 @@ function App() {
           pageNumber={pageNumber}
           setPageNumber={pageNumber => dispatch({type: 'SET_PAGENUMBER', payload: pageNumber})}
           fetchedData={fetchedData}
+          status={status}
+          species={species}
+          gender={gender}
         />} />
         <Route path="/:id" element={<CardDetails />} />
       </Routes>
@@ -77,7 +79,7 @@ function App() {
   );
 }
 
-const Home = ({ searchState, dispatch, pageNumber, setPageNumber, fetchedData, updateFetchedData }) => {
+const Home = ({ searchState, dispatch, pageNumber, setPageNumber, fetchedData,status, gender,species, updateFetchedData }) => {
   const { searchName } = searchState;
 
   return (
@@ -93,6 +95,9 @@ const Home = ({ searchState, dispatch, pageNumber, setPageNumber, fetchedData, u
               setStatus={status => dispatch({ type: 'SET_STATUS', payload: status })}
               setSpecies={species => dispatch({ type: 'SET_SPECIES', payload: species })}
               setPageNumber={setPageNumber}
+              status={status}
+              species={species}
+              gender={gender}
             />
           </div>
           <div className='col-8'>
