@@ -82,6 +82,7 @@ function App() {
 const Home = ({ searchState, dispatch, pageNumber, setPageNumber, fetchedData,status, gender,species, updateFetchedData }) => {
   const { searchName } = searchState;
 
+
   return (
     <div className="App">
       <h1 className={`text-center my-5 ${app.heading}`}>Rick & Morty <span style={{ color: "rgba(9, 111, 9, 0.842)" }}>Wiki</span></h1>

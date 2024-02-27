@@ -4,10 +4,11 @@ import { debounce } from 'lodash';
 
 
 const Search = ({searchName , setSearchName}) => {
+  
 
   const [name , setName] = useState(searchName);
 
-  const debounceName = debounce(setSearchName, 500);
+  const debounceName = debounce(setSearchName, 600);
 
   const handleClick = useCallback((event) => {
     setName(event.target.value);

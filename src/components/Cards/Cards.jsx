@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Cards = ({results , page}) => {
 
-  return results? (results.map((x)=>{
+  return (results? (results.map((x)=>{
     const {id , name , image, species, status, location} = x;
     return(
    <Link 
@@ -14,7 +14,7 @@ const Cards = ({results , page}) => {
           to={`${page}${id}`}
           className="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 position-relative text-dark"
    > 
-      <div className='card m-2'>
+      <div className='card m-2' data-testid='card'>
       <img src={image} alt=''/>
         <div className={`${design.card} p-2`}>
           <h4>{name}</h4>
@@ -25,7 +25,7 @@ const Cards = ({results , page}) => {
       {(() => {
             if (status === "Dead") {
               return (
-                <div
+                <div data-testid="badge-color"
                   className={`${design.badge} position-absolute badge bg-danger`}
                 >
                   {status}
@@ -33,7 +33,7 @@ const Cards = ({results , page}) => {
               );
             } else if (status === "Alive") {
               return (
-                <div
+                <div data-testid="badge-color"
                   className={`${design.badge} position-absolute badge bg-success`}
                 >
                   {status}
@@ -41,7 +41,7 @@ const Cards = ({results , page}) => {
               );
             } else {
               return (
-                <div
+                <div data-testid="badge-color"
                   className={`${design.badge} position-absolute badge bg-secondary`}
                 >
                   {status}
@@ -53,7 +53,7 @@ const Cards = ({results , page}) => {
     </Link>
   )
 
-  })) : "No Data here"
+  })) : "No Data here")
   
 };
 export default Cards;

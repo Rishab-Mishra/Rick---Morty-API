@@ -14,7 +14,6 @@ const CardDetails = () => {
     (function (){
       postServices.getPost({id}).then(res=>{
         updateFetchedData(res.data);
-        console.log(res.data);
       }).catch(err=>{
         console.log(err);
         updateFetchedData([]);

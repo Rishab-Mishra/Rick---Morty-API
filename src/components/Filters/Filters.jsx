@@ -3,6 +3,7 @@ import filterStyle from './Filter.module.css';
 
 const Filters = ({setStatus , setGender , setSpecies, status, gender, species})=>{
 
+    
 
     const handleClick = (value)=>{
         if(status === value){
@@ -40,7 +41,7 @@ const Filters = ({setStatus , setGender , setSpecies, status, gender, species})=
                     </h2>
                     <div id="panelsStayOpen-collapseOne" className="accordion-collapse collapse show">
                     <div className="accordion-body gap-1" style={{display: "flex" ,flexWrap: "wrap", justifyContent: "space-between"}}>
-                        <input type="radio" className="btn-check" checked={status === 'dead'} name="status" id="dead" autoComplete="off" />
+                        <input type="radio" className="btn-check" checked={status === 'dead'} name="status" id="dead" autoComplete="off" data-testid="deadInput" />
                         <label onClick={() => handleClick("dead")} className="btn btn-outline-success" htmlFor="dead">Dead</label>
                         <input type="radio" className="btn-check" name="status" checked={status === 'alive'} id="alive" autoComplete="off"  />
                         <label onClick={() => handleClick("alive")} className="btn btn-outline-success" htmlFor="alive">Alive</label>
